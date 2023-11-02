@@ -3,7 +3,16 @@ Nginx + PHP-fpm + Mysql + PhpMyAdmin
 
 Docker Compose template for yii2 or simple php web app.
 
-Docker Compose config
+Clone Docker Compose project
+----
+
+```
+git clone https://github.com/AndrewDanilov/docker-nginx-php-fpm.git docker
+cd docker
+rm -rf .git
+```
+
+Change Docker Compose config
 ----
 
 Edit .env, for example change project name to your desired project name.
