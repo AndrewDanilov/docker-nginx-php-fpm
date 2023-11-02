@@ -31,7 +31,9 @@ RUN docker-php-ext-install -j$(nproc) \
     zip \
     intl
 
-RUN usermod -u 1000 www-data && groupmod -g 1000 www-data
+ARG USER_ID=1000
+ARG GROUP_ID=1000
+RUN usermod -u $USER_ID www-data && groupmod -g $GROUP_ID www-data
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
